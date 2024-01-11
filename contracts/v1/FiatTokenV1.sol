@@ -66,6 +66,10 @@ contract FiatTokenV1 is Initializable, OwnableUpgradeable, PausableUpgradeable {
     event MinterRemoved(address indexed oldMinter);
     event MasterMinterChanged(address indexed newMasterMinter);
 
+    constructor() {
+        _disableInitializers();
+    }
+
     function initialize(
         string memory tokenName,
         string memory tokenSymbol,
