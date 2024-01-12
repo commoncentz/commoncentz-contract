@@ -37,9 +37,8 @@ import "@openzeppelin/contracts-upgradeable/utils/PausableUpgradeable.sol";
 contract FiatTokenV1 is Initializable, OwnableUpgradeable, PausableUpgradeable {
     string public name;
     string public symbol;
-    uint8 public decimals;
     string public currency;
-
+    uint8 public decimals;
     address public blacklister;
     address public masterMinter;
     uint256 internal totalSupply_;
